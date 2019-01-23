@@ -1,0 +1,6 @@
+{
+    "common.error": "錯誤",
+    "common.response.unauthorized": "You are not authorized to access this function",
+    "common.response.error": "Server error, please try again later or contact administrator",
+    "common.request.fail":"Request failed"
+}
