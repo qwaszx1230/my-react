@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import { List1 } from "./events/lists1";
 import { List2 } from "./events/list2";
+import { Button } from "antd";
 
 interface TestPageProps {
     name: string
@@ -15,16 +16,23 @@ const mapStateToProps = (state) => {
 }
 
 class TestInternalPage extends React.Component<TestPageProps, any>{
+    List: any;
     constructor(props, context) {
         super(props, context);
+    }
+
+    onHandleClick() {
+        // 组件通信之onRef方法
+        alert(this.List.state.info)
     }
 
     render() {
         return <div>Home
             <h2>我拿到redux里面的Name了  {this.props.name}</h2>
             <Link to="/about">about</Link>
-            <List1 />
+            <List1 onRef={(child) => this.List = child} />
             <List2 />
+            <Button type="primary" onClick={() => this.onHandleClick()}>父组件按钮</Button>
         </div>
     }
 }

@@ -11,6 +11,7 @@ export class List2 extends React.Component<any, any>{
     render() {
         return <div>
             <Button onClick={() => this.onHandleClick()}>点击我要改变list1组件显示信息</Button>
+        
         </div>
     }
 }
