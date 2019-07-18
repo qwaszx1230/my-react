@@ -20,7 +20,7 @@ export class List1 extends React.Component<any, any>{
     }
 
     componentWillUnmount() {
-        emitter.removeListener(this.eventEmitter, null);
+        emitter.removeListener(this.eventEmitter, () => { });
     }
 
     onClick() {

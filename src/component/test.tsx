@@ -2,7 +2,7 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import { List1 } from "./events/lists1";
-import { List2 } from "./events/list2";
+import List2 from "./events/list2";
 import { Button } from "antd";
 
 interface TestPageProps {
