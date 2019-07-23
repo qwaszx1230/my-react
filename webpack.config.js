@@ -26,7 +26,6 @@ var plugins = [
         filename: "app.css"
     }),
     new HtmlWebpackPlugin({
-        favicon: './favicon.ico', //favicon路径
         filename: '../index.html',
         template: "./src/index.html",
         inject: true,
@@ -100,11 +99,20 @@ module.exports = {
     devtool: is_dev ?
         'source-map' : "none",
     entry: {
-        app: ['./src/app']
+        app: ['./src/app'],
+        vendor:['react','antd','react-dom','react-intl','react-redux']
     },
     optimization: {
         splitChunks:{
             automaticNameDelimiter: '-',
+            cacheGroups:{
+                vendor:{
+                    test:'vendor',
+                    chunks:"initial",
+                    name:"vendor",
+                    enforce:true
+                }
+            }
         },
         minimizer: is_dev ? [
             // we specify a custom UglifyJsPlugin here to get source maps in production
@@ -141,8 +149,7 @@ module.exports = {
             "/" : BUILD_PATH,
         publicPath: is_dev ?
             '/' : publicPath,
-        filename: is_dev ?
-            '[name].js' : '[name].js',
+        filename: '[name].js',
         chunkFilename: is_dev ?
             '[name].js' : '[name]-' + process.env.NODE_ENV + '-[hash:5].js'
     },

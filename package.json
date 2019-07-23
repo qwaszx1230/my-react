@@ -5,7 +5,8 @@
   "main": "app.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --https --host 127.0.0.1 --inline --colors --profile --config ./config/webpack.dev.config.js"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --https --host 127.0.0.1 --inline --colors --profile --config ./config/webpack.dev.config.js",
+    "uat": "cross-env NODE_ENV=uat webpack --colors -p --sort-modules-by size --config webpack.config.js"
   },
   "keywords": [
     "ts",
@@ -58,6 +59,7 @@
     "redux": "^4.0.1",
     "redux-actions": "^2.6.4",
     "redux-saga": "^0.16.2",
-    "superagent": "^4.1.0"
+    "superagent": "^4.1.0",
+    "uglifyjs-webpack-plugin": "^2.1.3"
   }
 }
