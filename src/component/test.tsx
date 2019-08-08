@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { List1 } from "./events/lists1";
 import List2 from "./events/list2";
 import { Button } from "antd";
+const md5 = require('js-md5');
 
 interface TestPageProps {
     name: string
@@ -20,6 +21,12 @@ class TestInternalPage extends React.Component<TestPageProps, any>{
     constructor(props, context) {
         super(props, context);
     }
+
+    componentDidMount() {
+        let m=md5("我拿到redux里面的Name了");
+        console.log(m);
+    }
+    
 
     onHandleClick() {
         // 组件通信之onRef方法

@@ -8,6 +8,7 @@ import { injectIntl, IntlProvider } from 'react-intl';
 import { getLocale } from './locales';
 import { LocaleProvider } from 'antd';
 import { CommonLocale } from './locales/localeid';
+
 export interface AppBaseProps {
     onLoaded?: (appLocale?: AppLocaleStatic, theme?: string) => Promise<any>;
 }
