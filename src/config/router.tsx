@@ -3,6 +3,8 @@ import { HashRouter, Route, Router, BrowserRouter, Switch } from 'react-router-d
 import { PathConfig } from './pathconfig';
 import { TestPage } from '../component/test';
 import { AboutPage } from '../component/about';
+import { DragTestPage } from '../component/drag';
+import { PixiTestPage } from '../component/pixi';
 
 
 export let router = (
@@ -10,6 +12,8 @@ export let router = (
         <Switch>
             <Route exact path={PathConfig.Home} component={TestPage}></Route>
             <Route exact path={PathConfig.About} component={AboutPage}></Route>
+            <Route exact path={PathConfig.Drag} component={DragTestPage}></Route>
+            <Route exact path={PathConfig.Pixi} component={PixiTestPage}></Route>
         </Switch>
     </HashRouter>
 )

@@ -36,7 +36,8 @@ class TestInternalPage extends React.Component<TestPageProps, any>{
     render() {
         return <div>Home
             <h2>我拿到redux里面的Name了  {this.props.name}</h2>
-            <Link to="/about">about</Link>
+            <Link to="/about">about</Link><br/>
+            <Link to="/test">drag</Link>
             <List1 onRef={(child) => this.List = child} />
             <List2 />
             <Button type="primary" onClick={() => this.onHandleClick()}>父组件按钮</Button>
