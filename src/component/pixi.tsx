@@ -1,6 +1,6 @@
 import * as React from 'react';
 // import { Stage, Sprite } from "@inlet/react-pixi";
-import * as PIXI from "pixi.js";
+// import * as PIXI from "pixi.js";
 export class PixiTestPage extends React.Component<any, any>{
     app: any;
     constructor(app) {

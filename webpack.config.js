@@ -170,11 +170,21 @@ module.exports = {
             test: /\.(less|css)$/,
             exclude: /^node_modules$/,
             use: [
-                is_dev ? 'style-loader' : MiniCssExtractPlugin.loader,
-                'css-loader',
-                'less-loader',
+                { loader: is_dev ? 'style-loader' : MiniCssExtractPlugin.loader },
+                { loader: 'css-loader' },
+                { loader: 'less-loader'}
             ]
         }]
+    },
+    css:{
+        requireModuleExtension: true, 
+        loaderOptions:{
+            less:{
+                lessOptions:{
+                    javascriptEnabled: true
+                }
+            }
+        }
     },
     plugins: plugins,
     resolve: {

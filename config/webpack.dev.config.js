@@ -136,15 +136,25 @@ module.exports = {
             test: /\.(less|css)$/,
             exclude: /^node_modules$/,
             use: [
-                "style-loader",
-                "css-loader",
-                "less-loader"
+                {loader:'style-loader'},
+                {loader:'css-loader'},
+                {loader:'less-loader'}
             ]
         }, {
             test: /\.(jpe?g|png|gif|svg)$/,
             use: 'url-loader?limit=50000&name=[path][name].[ext]'
         }]
     },
+    // css:{
+    //     requireModuleExtension: true, 
+    //     loaderOptions:{
+    //         less:{
+    //             lessOptions:{
+    //                 javascriptEnabled: true
+    //             }
+    //         }
+    //     }
+    // },
     plugins: plugins,
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],

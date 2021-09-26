@@ -5,6 +5,7 @@ import { TestPage } from '../component/test';
 import { AboutPage } from '../component/about';
 import { DragTestPage } from '../component/drag';
 import { PixiTestPage } from '../component/pixi';
+import { TypescriptPage } from '../component/typescript';
 
 
 export let router = (
@@ -14,6 +15,7 @@ export let router = (
             <Route exact path={PathConfig.About} component={AboutPage}></Route>
             <Route exact path={PathConfig.Drag} component={DragTestPage}></Route>
             <Route exact path={PathConfig.Pixi} component={PixiTestPage}></Route>
+            <Route exact path={PathConfig.Typescript} component={TypescriptPage}></Route>
         </Switch>
     </HashRouter>
 )
