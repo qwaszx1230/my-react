@@ -87,7 +87,7 @@ export class TypescriptPage extends React.Component<any, any>{
             constructor(name: string) {
                 super(name);
                 this.name = "test";
-                super.name = "Bob";
+                // super.name = "Bob";
             }
 
         }
